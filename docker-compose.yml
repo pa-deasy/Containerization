@@ -1,0 +1,10 @@
+version: "1"
+services:
+  calculator:
+    image: patrickdeasy1988/calculator
+    # command: python app.py
+    container_name: calculator
+    ports:
+      - 8888:5000
+    volumes:
+      - ./app:/opt/app
