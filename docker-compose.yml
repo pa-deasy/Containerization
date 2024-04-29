@@ -1,0 +1,14 @@
+version: '1'
+
+services:
+  scratch_db:
+    image: postgres:latest
+    container_name: scratch_db
+    ports:
+      - 5432:5432
+    volumes:
+      - ~/apps/postgres:/var/lib/postgresql/data
+    environment:
+      - POSTGRES_PASSWORD=password
+      - POSTGRES_USER=user
+      - POSTGRES_DB=postgres
